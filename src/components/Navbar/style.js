@@ -1,15 +1,10 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-export const StyleHeader = styled.header`
+export const Header = styled.header`
   background-color: #222;
 `
-export const Center = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
-`
-export const Wrapper = styled.div`
+export const DivWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
