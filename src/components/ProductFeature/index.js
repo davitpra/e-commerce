@@ -1,18 +1,20 @@
 'use client'
+import {useContext} from "react";
 
 import {Button, ButtonLink} from "@/components/Buttons";
 import CartIcon from "@/components/icons/CartIcon";
-// import {CartContext} from "@/components/CartContext";
 import Center from "@/components/Center";
-// import {useContext} from "react";
+
+import { CartContext } from "@/context/CartContext";
+
 import {DivBackGround, ColumnsWrapper, Column, H1, P, ButtonsWrapper} from "./style";
 
 
 export default function ProductFeature({product}) {
-  // const {addProduct} = useContext(CartContext);
-  // function addFeaturedToCart() {
-  //   addProduct(product._id);
-  // }
+  const {addProduct} = useContext(CartContext);
+  function addFeaturedToCart() {
+    addProduct(product._id);
+  }
   return (
     <DivBackGround>
       <Center>
@@ -25,8 +27,7 @@ export default function ProductFeature({product}) {
                 <ButtonLink href={'/product/'+product._id} outline={1} white={1}>
                   Read more
                 </ButtonLink>
-                {/* onClick={addFeaturedToCart} */}
-                <Button white={1} >
+                <Button white={1} onClick ={addFeaturedToCart}>
                   <CartIcon />
                   Add to cart
                 </Button>

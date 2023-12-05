@@ -1,12 +1,15 @@
 'use client'
+import {useContext} from "react";
+
 import {Button} from "@/components/Buttons";
+
+import { CartContext } from "@/context/CartContext";
+
 import {WhiteBox, ProductInfoBox, Title, PriceRow, Price, ProductWrapper} from "./style";
 
-// import {useContext} from "react";
-// import {CartContext} from "@/components/CartContext";
 
 export default function ProductCard({_id,title,alt,price,image}) {
-//   const {addProduct} = useContext(CartContext);
+  const {addProduct} = useContext(CartContext);
   const url = '/product/'+_id;
   return (
     <ProductWrapper>
