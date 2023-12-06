@@ -6,8 +6,6 @@ import {Button} from "@/components/Buttons";
 import { CartContext } from "@/context/CartContext";
 
 import {WhiteBox, ProductInfoBox, Title, PriceRow, Price, ProductWrapper} from "./style";
-import CartIcon from "../icons/CartIcon";
-
 
 export default function ProductCard({_id,title,alt,price,image}) {
   const {addProduct} = useContext(CartContext);
@@ -26,7 +24,6 @@ export default function ProductCard({_id,title,alt,price,image}) {
             ${price}
           </Price>
           <Button block onClick={() => addProduct(_id)} primary outline>
-            <CartIcon />
             Add to cart 
           </Button>
         </PriceRow>
