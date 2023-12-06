@@ -24,7 +24,7 @@ export default function ProductFeature({product}) {
               <H1>{product.title}</H1>
               <P>{product.description}</P>
               <ButtonsWrapper>
-                <ButtonLink href={'/product/'+product._id} outline={1} white={1}>
+                <ButtonLink href={'/products/'+product._id} outline={1} white={1}>
                   Read more
                 </ButtonLink>
                 <Button white={1} onClick ={addFeaturedToCart}>
