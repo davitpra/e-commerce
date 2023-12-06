@@ -21,7 +21,6 @@ export default function ProductPage({params}) {
   const {addProduct} = useContext(CartContext);
   return (
     <>
-      <Navbar />
       <Center>
         <ColWrapper>
           <WhiteBox>

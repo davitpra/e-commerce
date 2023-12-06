@@ -8,7 +8,6 @@ import products from "@/libs/products.json"
 function Home() {
   return (
     <>
-      <Navbar />
       <ProductFeature product = {products[0]}/>
       <NewReleases products= {products}/>
     </>

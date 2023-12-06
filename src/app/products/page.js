@@ -8,7 +8,6 @@ import ProductCard from "@/components/ProductCard";
 export default function ProductsPage() {
   return (
     <>
-      <Navbar />
       <Center>
         <H2>All products</H2>
         <ProductsGrid>

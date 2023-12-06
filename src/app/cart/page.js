@@ -2,7 +2,6 @@
 
 import {useContext, useEffect, useState} from "react";
 
-import Navbar from "@/components/Navbar";
 import Center from "@/components/Center";
 import {Button} from "@/components/Buttons"
 import productsDB from "@/libs/products.json";
@@ -86,7 +85,6 @@ export default function CartPage() {
   if (isSuccess) {
     return (
       <>
-        <Navbar />
         <Center>
           <ColumnsWrapper>
             <Box>
@@ -101,7 +99,6 @@ export default function CartPage() {
 
   return (
     <>
-      <Navbar />
       <Center>
         <ColumnsWrapper>
           <Box>
