@@ -7,14 +7,16 @@ import { H2, ProductsGrid } from './style'
 
 import products from "@/store/products.json"
 
-export default function ProductsPage() {
+export default function category({params}) {
+  const {category} = params
+  const productsFiltered = products.filter(product => product.category === decodeURIComponent(category));
   return (
     <>
       <Center>
-        <H2>All products</H2>
+        <H2>{decodeURIComponent(category)}</H2>
         <ProductsGrid>
-        { products?.length === 0 && <p>No products</p>}
-        { products?.length > 0 && products.map((product, index) => (
+        { productsFiltered?.length === 0 && <p>No products</p>}
+        { productsFiltered?.length > 0 && productsFiltered.map((product, index) => (
           <ProductCard key={index} {...product} />
         ))}
       </ProductsGrid>

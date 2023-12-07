@@ -6,7 +6,7 @@ import ProductCard from '../ProductCard'
 
 function NewReleases({products}) {
 
-  const listOfProducts = products.slice(0, 4)
+  const listOfProducts = products.slice(0, 8)
   return (
     <Center>
       <H2>New Releases</H2>

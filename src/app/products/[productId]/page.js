@@ -2,7 +2,6 @@
 import {useContext} from "react";
 
 import Center from "@/components/Center";
-import Navbar from "@/components/Navbar";
 import ProductImages from "@/components/ProductImages";
 import {Button} from "@/components/Buttons";
 import CartIcon from "@/components/icons/CartIcon";
@@ -11,7 +10,7 @@ import {CartContext} from "@/context/CartContext";
 
 import { H2, ColWrapper, PriceRow, Price, WhiteBox} from './style'
 
-import products from "@/libs/products.json"
+import products from "@/store/products.json"
 
 
 export default function ProductPage({params}) {

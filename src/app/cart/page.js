@@ -4,7 +4,7 @@ import {useContext, useEffect, useState} from "react";
 
 import Center from "@/components/Center";
 import {Button} from "@/components/Buttons"
-import productsDB from "@/libs/products.json";
+import productsDB from "@/store/products.json";
 
 import { CartContext } from "@/context/CartContext";
 

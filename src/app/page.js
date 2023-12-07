@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar"
 import NewReleases from "@/components/NewReleases"
 import ProductFeature from "@/components/ProductFeature"
-import products from "@/libs/products.json"
+import products from "@/store/products.json"
 
 
 
