@@ -15,7 +15,6 @@ export default function CartPage() {
   const {cartProducts,addProduct,removeProduct,clearCart} = useContext(CartContext);
 
   const [products,setProducts] = useState([]);
-  const [listOfProducts,setListOfProducts] = useState([]);
   const [name,setName] = useState('');
   const [email,setEmail] = useState('');
   const [city,setCity] = useState('');
@@ -26,16 +25,13 @@ export default function CartPage() {
 
   useEffect(() => {
     if (cartProducts.length > 0) {
-        cartProducts.map((productId) => {
-            const product = productsDB.find((product) => product._id === productId);
-            setProducts((prev) => [...prev, product]);
-            })
-
-
+      cartProducts.map(() => {
+        const productsFiltered = cartProducts.map( (id) => productsDB.find((product) => product._id === id));
+        setProducts(productsFiltered);
+      })
     } else {
       setProducts([]);;
     }
-
   }, [cartProducts]);
 
   useEffect(() => {
@@ -67,20 +63,19 @@ export default function CartPage() {
 //     }
 //   }
 
-  let total = 0;
+  let subTotal = 0;
   for (const productId of cartProducts) {
     const price = products.find(p => p._id === productId)?.price || 0;
-    total += price;
+    subTotal += price;
   }
 
-  useEffect(() => {
-  const newList = Array.from(new Set(products.map(obj => obj._id))).map(_id => {
-    return products.find(obj => obj._id === _id);
-  })
+  let shipping = 0;
+  for (const productId of cartProducts) {
+    const price = products.find(p => p._id === productId)?.costOfShipping || 0;
+    shipping += price;
+  }
 
-  setListOfProducts(newList);
-  console.log(listOfProducts)
-    }, [products])
+  const total = subTotal + shipping;
 
   if (isSuccess) {
     return (
@@ -126,24 +121,37 @@ export default function CartPage() {
                       </ProductInfoCell>
                       <td>
                         <Button
-                          onClick={() => lessOfThisProduct(product._id)}>-</Button>
+                          onClick={() => lessOfThisProduct(product._id)}
+                        >
+                          -
+                        </Button>
                         <QuantityLabel>
-                          {/* {cartProducts.filter(id => id === product._id).length} */}
                           1
                         </QuantityLabel>
-                        {/* <Button
-                          onClick={() => moreOfThisProduct(product._id)}>+</Button> */}
+                        <Button
+                          onClick={() => moreOfThisProduct(product._id)}>
+                          +
+                        </Button>
                       </td>
                       <td>
                         ${product.price}
-                        {/* ${cartProducts.filter(id => id === product._id).length * product.price} */}
                       </td>
                     </tr>
                   ))}
                   <tr>
                     <td></td>
+                    <td>Subtotal</td>
+                    <td>${subTotal.toFixed(2)}</td>
+                  </tr>
+                  <tr>
                     <td></td>
-                    <td>${total}</td>
+                    <td>Shipping</td>
+                    <td>${shipping.toFixed(2)}</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>Total</td>
+                    <td>${total.toFixed(2)}</td>
                   </tr>
                 </tbody>
               </StyledTable>
