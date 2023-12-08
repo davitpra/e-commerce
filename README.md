@@ -2,7 +2,7 @@
 
 ### Description:
 
-A frontend Online Store with the team of technology store. Powered by Next.js for functionalities and Styled-components for styling.
+A frontend Online Store with the theme of technology store. Powered by Next.js for functionalities and Styled-components for styling.
 
 Deploy: https://e-commerce-davitpra.vercel.app/
 
