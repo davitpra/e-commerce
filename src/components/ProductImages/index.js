@@ -1,5 +1,5 @@
 'use client'
-import {BigImageWrapper, BigImage, ImageButtons, ImageButton, Image} from "./style";
+import {BigImageWrapper, BigImage} from "./style";
 
 export default function ProductImages({image}) {
   return (

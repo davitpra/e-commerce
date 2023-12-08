@@ -5,6 +5,7 @@ export const H2 = styled.h2`
   font-weight: normal;
 `;
 
+
 export const ColWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
@@ -27,7 +28,7 @@ export const Price = styled.span`
 export const WhiteBox = styled.div`
   background-color: #fff;
   padding: 20px;
-  height: 120px;
+  /* height: 120px; */
   text-align: center;
   display: flex;
   align-items: center;
@@ -35,6 +36,6 @@ export const WhiteBox = styled.div`
   border-radius: 10px;
   img{
     max-width: 100%;
-    max-height: 80px;
+    max-height: 100%;
   }
 `;
