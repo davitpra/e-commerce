@@ -35,6 +35,8 @@ export default function CartPage() {
     }
   }, [cartProducts]);
 
+  console.log(JSON.stringify(productsDB))
+
   function moreOfThisProduct(id) {
     addProduct(id);
   }

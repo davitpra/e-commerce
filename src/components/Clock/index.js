@@ -53,12 +53,12 @@ export default function Clock () {
         <Center>
         <div style={{display:'flex', gap: 40}}>
         <StyledClock>
-            <p>Time:</p>
-            <p>{getFormattedTime()}</p>
-        </StyledClock>
-        <StyledClock>
             <p>Date:</p>
             <p>{getFormattedDate()}</p>
+        </StyledClock>
+        <StyledClock>
+            <p>Time:</p>
+            <p>{getFormattedTime()}</p>
         </StyledClock>
         </div>
 
