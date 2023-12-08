@@ -75,7 +75,8 @@ export default function CartPage() {
     shipping += price;
   }
 
-  const total = subTotal + shipping;
+  const tax = (subTotal + shipping)*0.13;
+  const total = subTotal + shipping + tax;
 
   if (isSuccess) {
     return (
@@ -150,8 +151,13 @@ export default function CartPage() {
                   </tr>
                   <tr>
                     <td></td>
-                    <td>Total</td>
-                    <td>${total.toFixed(2)}</td>
+                    <td>Tax</td>
+                    <td>${tax.toFixed(2)}</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><strong>Total</strong></td>
+                    <td><strong>${total.toFixed(2)}</strong></td>
                   </tr>
                 </tbody>
               </StyledTable>
