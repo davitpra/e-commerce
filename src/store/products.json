@@ -8,7 +8,7 @@
     "price": 1499.99,
     "category": "Computers and Laptops",
     "costOfShipping": 10,
-    "quantity": 5
+    "quantity": 3
   },
   {
     "title": "SmartPhone Elite Z9",
@@ -30,7 +30,7 @@
     "price": 299.99,
     "category": "Mobile Devices",
     "costOfShipping": 10,
-    "quantity": 3
+    "quantity": 2
   },
   {
     "title": "UltraBook Quantum 5000",
@@ -41,7 +41,7 @@
     "price": 1299.99,
     "category": "Computers and Laptops",
     "costOfShipping": 10,
-    "quantity": 4
+    "quantity": 2
   },
   {
     "title": "SmartPhone Zed Pro",
@@ -63,7 +63,7 @@
     "price": 149.99,
     "category": "Audio and Sound",
     "costOfShipping": 10,
-    "quantity": 1
+    "quantity": 3
   },
   {
     "title": "HarmonySound 2.1 Speakers",
@@ -96,7 +96,7 @@
     "price": 199.99,
     "category": "Cameras and Photography",
     "costOfShipping": 8,
-    "quantity": 3
+    "quantity": 2
   },
   {
     "title": "Drone SkyPilot X3",
@@ -140,7 +140,7 @@
     "price": 899.99,
     "category": "Home Electronics",
     "costOfShipping": 25,
-    "quantity": 5
+    "quantity": 3
   },
   {
     "title": "VRVision Elite Virtual Reality Goggles",

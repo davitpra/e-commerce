@@ -7,6 +7,7 @@ import {Button} from "@/components/Buttons"
 import productsDB from "@/store/products.json";
 
 import { CartContext } from "@/context/CartContext";
+import toast from "react-hot-toast";
 
 
 import {ColumnsWrapper, Box, ProductInfoCell, ProductImageBox, QuantityLabel, CityHolder, StyledTable, StyledInput} from "./style";
