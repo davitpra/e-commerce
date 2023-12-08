@@ -40,14 +40,28 @@ export default function Clock () {
     return `${hours}:${minutes}:${seconds}`;
   };
 
+  const getFormattedDate = () => {
+    const year = time.getFullYear();
+    const month = String(time.getMonth() + 1).padStart(2, '0');
+    const day = String(time.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
+
   return (
 
     <Footer>
         <Center>
+        <div style={{display:'flex', gap: 40}}>
         <StyledClock>
             <p>Time:</p>
             <p>{getFormattedTime()}</p>
         </StyledClock>
+        <StyledClock>
+            <p>Date:</p>
+            <p>{getFormattedDate()}</p>
+        </StyledClock>
+        </div>
+
         </Center>
     </Footer>
 

@@ -3,6 +3,7 @@ import { CartContextProvider } from '@/context/CartContext'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Clock from '@/components/Clock'
+import { ToasterProvider } from '@/provider/ToasterProvider'
 
 const poppins = Poppins({ subsets: ['latin'], weight: '400',})
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
     <CartContextProvider>
       <html lang="en">
         <body className={poppins.className} style={{paddingBottom: 65}}>
+          <ToasterProvider/>
           <Navbar />
           {children}
           <Clock />

@@ -22,10 +22,13 @@ export const WhiteBox = styled(Link)`
 `;
 
 export const Title = styled(Link)`
+  display: flex;
+  align-items: center;
   font-weight: normal;
   font-size:.9rem;
   color:inherit;
   text-decoration:none;
+  min-height: 45px;
   margin:0;
 `;
 export const ProductInfoBox = styled.div`

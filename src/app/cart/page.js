@@ -10,6 +10,7 @@ import { CartContext } from "@/context/CartContext";
 
 
 import {ColumnsWrapper, Box, ProductInfoCell, ProductImageBox, QuantityLabel, CityHolder, StyledTable, StyledInput} from "./style";
+import toast from "react-hot-toast";
 
 export default function CartPage() {
   const {cartProducts,addProduct,removeProduct,clearCart} = useContext(CartContext);
@@ -34,16 +35,6 @@ export default function CartPage() {
     }
   }, [cartProducts]);
 
-  useEffect(() => {
-    if (typeof window === 'undefined') {
-      return;
-    }
-    if (window?.location.href.includes('success')) {
-      setIsSuccess(true);
-      clearCart();
-    }
-  }, []);
-
   function moreOfThisProduct(id) {
     addProduct(id);
   }
@@ -52,16 +43,47 @@ export default function CartPage() {
     removeProduct(id);
   }
 
-  // error no hay esta ruta de checkout
-//   async function goToPayment() {
-//     const response = await axios.post('/api/checkout', {
-//       name,email,city,postalCode,streetAddress,country,
-//       cartProducts,
-//     });
-//     if (response.data.url) {
-//       window.location = response.data.url;
-//     }
-//   }
+  async function goToPayment() {
+
+    if (!name) {
+      toast.error('Please fill your name');
+      return;
+    }
+
+    if (!email) {
+      toast.error('Please fill your email');
+      return;
+    }
+
+    if (!city) {
+      toast.error('Please fill your city');
+      return;
+    }
+
+    if (!postalCode) {
+      toast.error('Please fill your postal code');
+      return;
+    }
+
+    if (!streetAddress) {
+      toast.error('Please fill your street address');
+      return;
+    }
+
+    if (!country) {
+      toast.error('Please fill your country');
+      return;
+    }
+
+    if (cartProducts.length === 0) {
+      toast.error('Please add products to your cart');
+      return;
+    } else {
+    setIsSuccess(true);
+    clearCart();
+    toast.success('Order placed successfully!');
+    }
+  }
 
   let subTotal = 0;
   for (const productId of cartProducts) {
@@ -172,34 +194,34 @@ export default function CartPage() {
                      name="name"
                      onChange={ev => setName(ev.target.value)} />
               <StyledInput type="text"
-                     placeholder="Email"
-                     value={email}
-                     name="email"
-                     onChange={ev => setEmail(ev.target.value)}/>
+                placeholder="Email"
+                value={email}
+                name="email"
+                onChange={ev => setEmail(ev.target.value)}/>
               <CityHolder>
                 <StyledInput type="text"
-                       placeholder="City"
-                       value={city}
-                       name="city"
-                       onChange={ev => setCity(ev.target.value)}/>
+                  placeholder="City"
+                  value={city}
+                  name="city"
+                  onChange={ev => setCity(ev.target.value)}/>
                 <StyledInput type="text"
-                       placeholder="Postal Code"
-                       value={postalCode}
-                       name="postalCode"
-                       onChange={ev => setPostalCode(ev.target.value)}/>
+                    placeholder="Postal Code"
+                    value={postalCode}
+                    name="postalCode"
+                    onChange={ev => setPostalCode(ev.target.value)}/>
               </CityHolder>
               <StyledInput type="text"
-                     placeholder="Street Address"
-                     value={streetAddress}
-                     name="streetAddress"
-                     onChange={ev => setStreetAddress(ev.target.value)}/>
+                    placeholder="Street Address"
+                    value={streetAddress}
+                    name="streetAddress"
+                    onChange={ev => setStreetAddress(ev.target.value)}/>
               <StyledInput type="text"
-                     placeholder="Country"
-                     value={country}
-                     name="country"
-                     onChange={ev => setCountry(ev.target.value)}/>
+                    placeholder="Country"
+                    value={country}
+                    name="country"
+                    onChange={ev => setCountry(ev.target.value)}/>
               <Button black block
-                    //   onClick={goToPayment}
+                    onClick={()=> goToPayment()}
                 >
                 Continue to payment
               </Button>
