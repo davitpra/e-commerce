@@ -19,7 +19,7 @@
     "price": 699.99,
     "category": "Mobile Devices",
     "costOfShipping": 10,
-    "quantity": 8
+    "quantity": 3
   },
   {
     "title": "SmartWatch Zed",
@@ -30,7 +30,7 @@
     "price": 299.99,
     "category": "Mobile Devices",
     "costOfShipping": 10,
-    "quantity": 10
+    "quantity": 3
   },
   {
     "title": "UltraBook Quantum 5000",
@@ -41,7 +41,7 @@
     "price": 1299.99,
     "category": "Computers and Laptops",
     "costOfShipping": 10,
-    "quantity": 15
+    "quantity": 4
   },
   {
     "title": "SmartPhone Zed Pro",
@@ -52,7 +52,7 @@
     "price": 1099.99,
     "category": "Mobile Devices",
     "costOfShipping": 10,
-    "quantity": 20
+    "quantity": 2
   },
   {
     "title": "SonicWave Pro Headphones",
@@ -63,7 +63,7 @@
     "price": 149.99,
     "category": "Audio and Sound",
     "costOfShipping": 10,
-    "quantity": 25
+    "quantity": 1
   },
   {
     "title": "HarmonySound 2.1 Speakers",
@@ -74,7 +74,7 @@
     "price": 89.99,
     "category": "Audio and Sound",
     "costOfShipping": 12,
-    "quantity": 15
+    "quantity": 3
   },
   {
     "title": "RHDX 9000 Blu-ray Player",
@@ -85,7 +85,7 @@
     "price": 129.99,
     "category": "Home Electronics",
     "costOfShipping": 15,
-    "quantity": 20
+    "quantity": 3
   },
   {
     "title": "SmartGuard 1080p Security Camera",
@@ -96,7 +96,7 @@
     "price": 199.99,
     "category": "Cameras and Photography",
     "costOfShipping": 8,
-    "quantity": 30
+    "quantity": 3
   },
   {
     "title": "Drone SkyPilot X3",
@@ -107,7 +107,7 @@
     "price": 599.99,
     "category": "Cameras and Photography",
     "costOfShipping": 20,
-    "quantity": 10
+    "quantity": 3
   },
   {
     "title": "FitPro X900 Smartwatch",
@@ -118,7 +118,7 @@
     "price": 129.99,
     "category": "Wearable Technology",
     "costOfShipping": 10,
-    "quantity": 50
+    "quantity": 3
   },
   {
     "title": "TechNet SpeedBoost Advanced Router",
@@ -129,7 +129,7 @@
     "price": 79.99,
     "category": "Home Electronics",
     "costOfShipping": 15,
-    "quantity": 25
+    "quantity": 1
   },
   {
     "title": "MakerTech Pro X1 3D Printer",
@@ -140,7 +140,7 @@
     "price": 899.99,
     "category": "Home Electronics",
     "costOfShipping": 25,
-    "quantity": 15
+    "quantity": 5
   },
   {
     "title": "VRVision Elite Virtual Reality Goggles",
@@ -151,7 +151,7 @@
     "price": 249.99,
     "category": "Wearable Technology",
     "costOfShipping": 18,
-    "quantity": 20
+    "quantity": 2
   },
   {
     "title": "LightningStrike RGB Gaming Keyboard",
@@ -162,7 +162,7 @@
     "price": 129.99,
     "category": "Computers and Laptops",
     "costOfShipping": 12,
-    "quantity": 30
+    "quantity": 3
   }
 ]
 

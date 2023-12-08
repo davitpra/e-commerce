@@ -10,7 +10,6 @@ import { CartContext } from "@/context/CartContext";
 
 
 import {ColumnsWrapper, Box, ProductInfoCell, ProductImageBox, QuantityLabel, CityHolder, StyledTable, StyledInput} from "./style";
-import toast from "react-hot-toast";
 
 export default function CartPage() {
   const {cartProducts,addProduct,removeProduct,clearCart} = useContext(CartContext);
@@ -24,6 +23,7 @@ export default function CartPage() {
   const [country,setCountry] = useState('');
   const [isSuccess,setIsSuccess] = useState(false);
 
+  // define localStorage 
   useEffect(() => {
     if (cartProducts.length > 0) {
       cartProducts.map(() => {
@@ -35,10 +35,9 @@ export default function CartPage() {
     }
   }, [cartProducts]);
 
-  console.log(JSON.stringify(productsDB))
 
   function moreOfThisProduct(id) {
-    addProduct(id);
+      addProduct(id);
   }
 
   function lessOfThisProduct(id) {
